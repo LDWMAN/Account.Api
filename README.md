@@ -10,6 +10,8 @@ Additional work.
 3. Added save single fileController
 4. Change the folder structure
 
+Mohamad Lawand, thank you for your lecture.
+
 ### .Net Core Web API (.NET6)를 이용한 Jwt Token Account
 
 JWT 토큰과 UnitOfWork 패턴을 익히고자
@@ -20,3 +22,5 @@ Mohamad Lawand의 유튜브 강의를 바탕으로 Account Web API를 만들었�
 
 저는 개발자가 아닌 관계로 몇몇 부분의 경우 이상하게(?) 보일수도 있습니다.
 고쳐야 하는 부분이나 개선점이 있으면 언제든 알려주세요.
+
+Mohamad Lawand님, 강의 감사드립니다.
