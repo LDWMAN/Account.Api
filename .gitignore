@@ -1,0 +1,20 @@
+# Folder #
+/.vs/
+/.vscode/
+/wwwroot/
+/bin/
+/obj/
+/Properties/
+/Migrations/
+
+# Class Extention #
+
+
+# File Extention #
+*.csproj
+*.sin
+
+# File #
+appsettings.json
+appsettings.Development.json
+
