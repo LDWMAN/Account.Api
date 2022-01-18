@@ -51,7 +51,7 @@ public class AccountController : BaseTokenController
                         PasswordHash = EncryptDecypt.SHA256Hash(RegisterDto.Password)
                     };
 
-                    if (RegisterDto.ProfileImage.Length > 0)
+                    if (RegisterDto.ProfileImage != null && RegisterDto.ProfileImage.Length > 0)
                     {
                         string wwwroot = _webHostEnvironmentl.WebRootPath;
                         string path = wwwroot + FileUtil.PathProfiles;
