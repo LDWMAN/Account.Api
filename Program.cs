@@ -6,12 +6,25 @@ using AccountApi.Model.Configuration;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Account.API.Filter;
+using System.Net.Mime;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// Add Validation Filter 
+builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
+{
+    options.InvalidModelStateResponseFactory = context =>
+    {
+        var result = new ValidationFailedResult(context.ModelState);
+        result.ContentTypes.Add(MediaTypeNames.Application.Json);
+        return result;
+    };
+});
 
-builder.Services.AddControllers();
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -4,10 +4,10 @@ namespace AccountApi.Model.Dtos.USER
 {
     public class UserLoginDto
     {
-        [Required]
+        [Required(ErrorMessage = "Required")]
         public string Email { get; set; }
-        
-        [Required]
+
+        [Required(ErrorMessage = "Required")]
         public string Password { get; set; }
     }
 }
